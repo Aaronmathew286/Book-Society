@@ -14,7 +14,7 @@ def category(request):
 
 def details(request):
     id=request.GET["id"]
-    data=Products.objects.filter(pro_id=id)
+    data=Products.objects.filter(id=id)
     return render(request,"details.html",{"pro":data})
 
     
