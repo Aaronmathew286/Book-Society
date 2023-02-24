@@ -52,21 +52,7 @@ body{
     text-shadow:2px 2px  rgba(0, 0, 0, 0.603);
     
 }
-.body-div button{
-    font-size:18px;
-    color: rgb(254, 255, 255);
-    width:160px;
-    padding:7px;
-    border-radius:20px;
-    border:3px solid white;
-    background-color: rgba(240, 248, 255, 0.158);
 
-}
-.body-div button:hover{
-    background-color: rgb(182, 101, 8);
-    border:2px solid white;
-    
-}
 #logo{
 
     color: aliceblue;
@@ -99,7 +85,21 @@ body{
 
 
 
+.product button{
+    font-size:18px;
+    color: rgb(254, 255, 255);
+    width:160px;
+    padding:7px;
+    border-radius:20px;
+    border:3px solid white;
+    background-color: rgba(240, 248, 255, 0.158);
 
+}
+.product button:hover{
+    background-color: rgb(182, 101, 8);
+    border:2px solid white;
+    
+}
 .second-div {
     display: flex;
     justify-content: space-between;
