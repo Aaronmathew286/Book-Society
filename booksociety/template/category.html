@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/cat.css' %}">
+
+</head>
+
+<body>
+
+    <div class="main-div">
+        <!-- page no1: firstpage starting -->
+
+        <div class="first-div">
+            <div class="head-div" style="font-style: normal;">
+                <div class="img-div">
+                    <div>
+                        <img src="{% static 'img/logo1.png' %}"> 
+                    </div>        
+                  <b id="logo">BOOK SOCIETY</b>
+                </div>
+                <a href="{% url 'homepage' %}"><b>Home</b></a>
+                <a href="{% url 'aboutpage' %}"><b>About</b></a>
+
+                
+
+            </div>
+
+            <div class="product-display">
+                {% if category %}
+                {% for i in category %}
+                <div class="product">
+                    <img src="{{i.img.url}}" alt="Product 1 Image">
+                    
+                    <a href="{% url 'detailspage' %}?id={{i.id}}">
+                    <h2>{{i.name}}</h2></a>
+    
+                </div>
+                {% endfor %}
+                {% else %} 
+                <h2>No Products Available</h2>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- firstpage ended -->
+
+        <!-- secondpage started -->
+
+        <!-- secondpage ended -->
+        
+        <!-- footer starts-->
+        <!-- thirdpage starts-->
+        <div class="third-div">
+        
+            <div class="icon-div">
+                <h2>Book Society</h2>
+                <a href="#"></a><img src="{% static 'img/icons8-facebook-100.png' %}"></a>
+                
+                <a href="#"></a><img src="{% static 'img/icons8-instagram-100.png' %}"></a>
+            
+                <a href="#"></a><img src="{% static 'img/icons8-twitter-100.png' %}"></a>
+           
+                <a href="#"></a><img src="{% static 'img/icons8-gmail-logo-100.png' %}"></a>
+            </div>
+
+            <div class="footer-center">
+                <ul>
+                    <li> <b>Support</b></li>      
+                    <li>Contact us</li>    
+                    <li> FAQ</li>
+                    <li>  Downloads</li>
+                    <li> Location</li>
+                    <li> About us</li>       
+                </ul>
+
+            </div>
+
+            <div class="footer-right">
+                <p>Stay up to date on this website</p>
+                <input placeholder="Enter your E-mail">
+                <button>Sign Up</button>
+
+            </div>
+           
+
+        </div>
+    
+    
+    
+    
+    
+    </div>
+</body>
+
+</html>

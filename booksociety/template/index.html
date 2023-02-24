@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style3.css' %}">
+</head>
+
+<body>
+
+    <div class="main-div">
+        <!-- page no1: firstpage starting -->
+
+        <div class="first-div">
+            <div class="head-div" style="font-style: normal;">
+                <div class="img-div">
+                    <div>
+                        <img src="{% static 'img/logo1.png' %}"> 
+                    </div>        
+                  <b id="logo">BOOK SOCIETY</b>
+                </div>
+                <a href="{% url 'homepage' %}"><b>Home</b></a>
+                <a href="{% url 'aboutpage' %}"><b>About</b></a>
+
+                
+
+            </div>
+
+            <div class="body-div" style="background-image:url({% static 'img/pexels-mart-production-7718712.jpg' %});color: aliceblue;">
+                
+
+
+                <div>
+                <center>
+                    <b style="text-shadow:2px 2px 4px black;font-style:normal;">
+                        YOUR STATIONERY SITE
+                    </b>
+                    <p>
+                        There is something very comfortable in having plenty of stationery.<br>
+                        Whatever you choose for your stationery is your favorite color because it's where you pour your heart out.<br>
+                                 Stationery is addictive.<br>
+                        We are happy for our customers to experience the best stationery products<br>
+                        Order now 
+                        </p>
+                    <button>
+                    Submit
+                    </button>
+                </center>           
+                </div>
+            </div>
+        </div>
+
+        <!-- firstpage ended -->
+
+        <!-- secondpage started -->
+        <div class="second-div"style="background-image:url({% static 'img/pexels-karolina-grabowska-4219133.jpg' %});color: aliceblue;">
+
+            <div class="head2-div">
+                <center>
+                    <h2>Category</h2>
+                    <p>We are giving you the best stationery items.</p>
+                </center>
+            </div>
+        
+        <div class="body2-div">
+            <div class="products-div">
+               {% for i in pro %}
+                <div class="product">
+                <center>
+                    <img src="{{i.img.url}}" alt="Product 1 Image">
+                    <a href="{% url 'categorypage' %}?id={{i.id}}">
+                    <h3>{{i.name}}</h3></a>
+                </center> 
+                </div>
+                {% endfor %}  
+            </div>
+
+        
+        </div>
+        <!-- secondpage ended -->
+        
+        <!-- footer starts-->
+        <!-- thirdpage starts-->
+        <div class="third-div">
+        
+            <div class="icon-div">
+                <h2>Book Society</h2>
+                <a href="#"></a><img src="{% static 'img/icons8-facebook-100.png' %}"></a>
+                
+                <a href="#"></a><img src="{% static 'img/icons8-instagram-100.png' %}"></a>
+            
+                <a href="#"></a><img src="{% static 'img/icons8-twitter-100.png' %}"></a>
+           
+                <a href="#"></a><img src="{% static 'img/icons8-gmail-logo-100.png' %}"></a>
+            </div>
+
+            <div class="footer-center">
+                <ul>
+                    <li> <b>Support</b></li>      
+                    <li>Contact us</li>    
+                    <li> FAQ</li>
+                    <li>  Downloads</li>
+                    <li> Location</li>
+                    <li> About us</li>       
+                </ul>
+
+            </div>
+
+            <div class="footer-right">
+                <p>Stay up to date on this website</p>
+                <input placeholder="Enter your E-mail">
+                <button>Sign Up</button>
+
+            </div>
+           
+
+        </div>
+    
+    
+    
+    
+    
+    </div>
+</body>
+
+</html>

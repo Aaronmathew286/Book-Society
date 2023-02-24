@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pay.css' %}">
+
+</head>
+<body>
+
+
+    <div class="main-div">
+    
+        <form action="{% url 'paymentpage' %}">
+            <div class="row">
+                <div class="col">
+                
+                    <h3 class="title">billing address</h3>
+                    
+                    <div class="inputbox">
+                        <label for="full Name"><b>Name :</b></label>
+                        <input type="text" placeholder="Enter your full name" name="name">
+                    </div>
+                    <div class="inputbox">
+                        <label for="mail"><b>Email :</b></label>
+                        <input type="text" placeholder="Enter your email address" name="email">
+                    </div>
+                    <div class="inputbox">
+                        <label for="address"><b>Address :</b></label>
+                        <input type="text" placeholder="Enter your address" name="address">
+                    </div>
+                    <div class="inputbox">
+                        <label for="city"><b>City :</b></label>
+                        <input type="text" placeholder="City name" name="city">
+                    </div>
+                    <div id="flex">
+                        <div class="inputbox">
+                            <label for="state"><b>State :</b></label>
+                            <input type="text" placeholder="State name" name="state">
+                        </div>
+                        <div class="inputbox">
+                            <label for="pin"><b>Pin Code :</b></label>
+                            <input type="text" placeholder="Enter your address" name="pin">
+                        </div>
+                    </div>
+
+                
+                </div>
+
+
+                <div class="col">
+                
+                    <h3 class="title">payment</h3>
+                    
+                    <div class="inputbox">
+                        <label for="card"><b>Cards Accepted :</b></label>
+                        <img src="{% static 'img/pngwing.com.png' %}">
+                    </div>
+                    <div class="inputbox">
+                        <label for="cardname"><b>Name on Card :</b></label>
+                        <input type="text" placeholder="Enter name as on card" name="email">
+                    </div>
+                    <div class="inputbox">
+                        <label for="credit"><b>Credit Card Number:</b></label>
+                        <input type="text" placeholder="1111-2222-3333-4444" name="address">
+                    </div>
+                    <div id="flex">
+                        <div class="inputbox">
+                            <label for="expmonth"><b>Exp month/year :</b></label>
+                            <input type="text" placeholder="MM/YY" name="mm/yy">
+                        </div>
+                        <div class="inputbox">
+                            <label for="cvv"><b>CVV :</b></label>
+                            <input type="text" placeholder="****" name="cvv">
+                        </div>
+                    </div>
+
+                
+                </div>
+
+            </div>
+            <button type="submit" class="submit">Proceed to checkout</button>
+    
+        </form>
+    </div>
+
+</body>
+</html>
